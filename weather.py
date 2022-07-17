@@ -7,10 +7,12 @@ root = Tk()
 #pip install requests для работы с url  https://api. .org/data/2.5/weather?q={city name}&appid={API key}
 #https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
 #f'Данные: {str(login)}, {str(password)}'
+#f5184fc7d16d04d53af8d1ceebfcb7a0     my
+#82b797b6ebc625032318e16f1b42c016     not my
 def get_weather():
     city = cityField.get()
 
-    key = '82b797b6ebc625032318e16f1b42c016'
+    key = 'f5184fc7d16d04d53af8d1ceebfcb7a0'
     url = 'http://openweathermap.org/data/2.5/weather'   #f   ?q={str(city)}&appid={str(key)}
     params1 = {'APPID': key, 'q': city, 'units': 'metric'}    #словарь 
     result = requests.get(url, params=params1)
